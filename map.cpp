@@ -28,9 +28,10 @@ int main(void)
 	};
 	path(map, x, y, &state,&count,step,all);
 	if (state != 1) {
+		system("pause");
 		printf("NO path");
+		return 0;
 	}
-	printf("count is %d\n", count);
 	for (int i = 1; i < count + 1; i++) {
 		if (s_step > step[i]) {
 			s_step = step[i];
